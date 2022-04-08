@@ -11,10 +11,10 @@ const rootDir = './dist/TodoApp';
 
 require('dotenv').config()
 
-process.env.NODE_ENV === 'production' && app.use(requireHTTPS)
+process.env.NODE_ENV == 'production' && app.use(requireHTTPS)
 
 
-app.use(requireHTTPS);
+// app.use(requireHTTPS);
 app.use(express.static(rootDir));
 
 app.get('/*', (req, res) =>
